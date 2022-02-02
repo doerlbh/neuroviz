@@ -8,7 +8,7 @@ By Baihan Lin &copy; 2022, All Rights Reserved.
 
 *Which brain regions light up at which moments when seeing which images or listening certain music? And inversely what do brain imagine seeing or hearing given certain types of neural responses?*
 
-<br> <br>
+<br>
 
 In The Brain Experience, the data visualization enables the users to experience how human brains perform complicated tasks that we as people find easy. The mechanisms and processes beneath it, surprisingly, are highly complex and involve many organic elements. The projects can help the users unravel these beautiful mysteries that intrigue scientists and philosophers for ages. The cognitive tasks specific for this visualization are mostly likely to be either viewing images or listening to music.
 
