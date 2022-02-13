@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>01-vue</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+      #app svg {
+        padding: 5px;
+      }
+      svg text {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 24px;
+        text-anchor: middle;
+        alignment-baseline: middle;
+      }
+      svg rect {
+        stroke: black;
+        stroke-width: 1px;
+      }
+      .bad-guess {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Nerdle*</h1>
+      <div>
+        <button @click="resetGame">New game</button>
+      </div>
+      <div>
+        <input type="text" v-model="currentGuess" @input="clearBadGuess" :disabled="didWin"/>
+        <button @click="addGuess" :disabled="didWin">Add guess</button>
+      </div>
+      <div>
+        <span v-if="badGuess.show" class="bad-guess">bad guess: {{ badGuess.reason }}!</span>
+      </div>
+      <svg :height="svgHeight" :width="svgWidth">
+        <g v-for="(row, rowIndex) in gridData">
+          <g
+            v-for="(cell, cellIndex) in row"
+            :transform="`translate(${xScale(cellIndex)}, ${yScale(rowIndex)})`"
+          >
+            <rect :height="tileDimension" :width="tileDimension" :fill="cell.color"></rect>
+            <text :x="tileDimension / 2" :y="tileDimension / 2">
+              {{ cell.letter }}
+            </text>
+          </g>
+        </g>
+      </svg>
+      <h5>*it's not Wordle.</h5>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
