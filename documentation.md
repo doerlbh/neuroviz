@@ -43,13 +43,18 @@ in order to help thereaders understand *how the human brains process information
 
 ![research-map](./assets/research-map.png)
 
-<br>
-
-<br>
+<br><br>
 
 **Design Outline**:
 
 ![initial-design](./assets/initial-design.png)
+
+<br><br>
+
+
+**Design Wireframe**:
+
+![wireframe](./assets/wireframe.png)
 
 <br><br>
 
