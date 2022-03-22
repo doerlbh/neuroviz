@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <svg id="viz"></svg>
+  </body>
+  <script>
+    function draw(data) {
+      const svg = d3.select("svg#viz");
+      const height = +svg.style("height").slice(0, -2);
+      const width = +svg.style("width").slice(0, -2);
+
+      const xScale = d3
+        .scaleLinear()
+        .domain(d3.extent(data, (d) => d["Cocoa Percent"]))
+        .range([0, width]);
+
+      const yScale = d3
+        .scaleLinear()
+        .domain(d3.extent(data, (d) => d["Rating"]))
+        .range([0, height]);
+
+      svg
+        .selectAll("circle")
+        .data(data)
+        .join("circle")
+        .attr("cx", (d) => xScale(d["Cocoa Percent"]))
+        .attr("cy", (d) => height - yScale(d["Rating"]))
+        .attr("r", 1);
+    }
+
+    function onDataLoad(dataString) {
+      const parsedData = JSON.parse(dataString);
+      console.log(parsedData);
+      draw(parsedData);
+    }
+
+    function onDataError(error) {
+      alert("failure: ", error);
+    }
+
+    google.script.run
+      .withSuccessHandler(onDataLoad)
+      .withFailureHandler(onDataError)
+      .getData();
+  </script>
+  <style>
+    body {
+      margin: 0px;
+    }
+  </style>
+</html>
