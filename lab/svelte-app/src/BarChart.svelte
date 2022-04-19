@@ -1,6 +1,8 @@
 <script>
     import * as d3 from 'd3';
     import { afterUpdate } from 'svelte';
+    import Slider from '@smui/slider';
+    import '../node_modules/@smui/slider/bare.css';
 
 	export let data = [];
     export let height;
@@ -45,6 +47,7 @@
 
                     const nameText = bar
                         .append('text')
+                        .attr('class', 'name-text')
                         .attr('y', height + rectWidth)
                         .attr('x', (d) => xScale(d.name))
                         .attr(
@@ -57,6 +60,7 @@
 
                     const tempText = bar
                         .append('text')
+                        .attr('class', 'temp-text')
                         .attr('text-anchor', 'middle')
                         .attr('x', (d) => xScale(d.name) + rectWidth / 2)
                         .attr('y', height)
@@ -69,7 +73,22 @@
                     return bar;
                 },
                 (update) => {
-                    update.select('rect').attr('fill', 'lightgreen');
+                    update
+                        .select('rect')
+                        .attr('fill', 'lightgreen')
+                        .attr('width', rectWidth)
+                        .attr('x', (d) => xScale(d.name));
+                    update
+                        .select('.name-text')
+                        .attr('y', height + rectWidth)
+                        .attr('x', (d) => xScale(d.name))
+                        .attr(
+                            'transform',
+                            (d) => `rotate(-90 ${xScale(d.name)} ${height})`
+                        );
+                    update
+                        .select('.temp-text')
+                        .attr('x', (d) => xScale(d.name) + rectWidth / 2);
                     return update;
                 },
                 (exit) => {
@@ -96,15 +115,14 @@
 <main>
     <div>
         <label for="days-slider">Number of forecasts to show: {days}</label>
-        <input
-            type="range"
-            min="3"
-            max="14"
-            value={days}
-            on:mouseup={event => days = +event.target.value}
-            name="days-slider"
-            id="days"
-        >
+        <Slider
+            bind:value={days}
+            min={3}
+            max={14}
+            step={1}
+            discrete
+            tickMarks
+        />
     </div>
     <div>{shortForecast}</div>
     <svg height={height} width={width}>
@@ -113,4 +131,7 @@
 </main>
 
 <style>
+input[type="range"]::-webkit-slider-thumb {
+  cursor: ew-resize; /* grab */
+}
 </style>

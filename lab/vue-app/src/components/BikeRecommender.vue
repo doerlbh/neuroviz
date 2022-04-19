@@ -1,13 +1,11 @@
 <template>
-  <div
+  <el-card
+    shadow="always"
     class="card"
-    :class="{
-      shouldRide: recommendation === true,
-      shouldNotRide: recommendation === false,
-    }"
+    :body-style="{ backgroundColor: recommendation ? 'green' : 'red' }"
   >
     {{ recommendationText }}
-  </div>
+  </el-card>
 </template>
 
 <script>
@@ -30,21 +28,6 @@ export default {
 
 <style>
 .card {
-  border: 1px solid black;
-  border-radius: 4px;
-  opacity: 0.8;
-  background-color: lightgray;
-  width: 300px;
-  margin: 10px;
-  padding: 50px;
   color: white;
-  font-weight: bold;
-  font-size: 24px;
-}
-.shouldRide {
-  background-color: green;
-}
-.shouldNotRide {
-  background-color: red;
 }
 </style>

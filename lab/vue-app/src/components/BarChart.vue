@@ -1,16 +1,8 @@
 <template>
   <div>
-    <div>
-      <label for="days-slider">Number of forecasts to show: {{ days }}</label>
-      <input
-        type="range"
-        :min="3"
-        :max="14"
-        :value="days"
-        @mouseup="setDays"
-        name="days-slider"
-        id="days"
-      />
+    <div class="slider">
+      <label for="days-slider">Number of forecasts to show:</label>
+      <el-slider :min="3" :max="14" v-model="days" show-input show-stops />
     </div>
     <div>{{ shortForecast }}</div>
     <svg :height="height" :width="width">
@@ -63,11 +55,6 @@ export default {
       return this.xScale.bandwidth();
     },
   },
-  methods: {
-    setDays(event) {
-      this.days = +event.target.value;
-    },
-  },
   updated() {
     const that = this;
     d3.select(".bars")
@@ -91,6 +78,7 @@ export default {
 
           const nameText = bar
             .append("text")
+            .attr("class", "name-text")
             .attr("y", this.height + this.rectWidth)
             .attr("x", (d) => this.xScale(d.name))
             .attr(
@@ -103,6 +91,7 @@ export default {
 
           const tempText = bar
             .append("text")
+            .attr("class", "temp-text")
             .attr("text-anchor", "middle")
             .attr("x", (d) => this.xScale(d.name) + this.rectWidth / 2)
             .attr("y", this.height)
@@ -115,7 +104,22 @@ export default {
           return bar;
         },
         (update) => {
-          update.select("rect").attr("fill", "lightgreen");
+          update
+            .select("rect")
+            .attr("fill", "lightgreen")
+            .attr("width", this.rectWidth)
+            .attr("x", (d) => this.xScale(d.name));
+          update
+            .select(".name-text")
+            .attr("y", this.height + this.rectWidth)
+            .attr("x", (d) => this.xScale(d.name))
+            .attr(
+              "transform",
+              (d) => `rotate(-90 ${this.xScale(d.name)} ${this.height})`
+            );
+          update
+            .select(".temp-text")
+            .attr("x", (d) => this.xScale(d.name) + this.rectWidth / 2);
           return update;
         },
         (exit) => {
@@ -140,4 +144,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.slider {
+  max-width: 50%;
+  margin: 0 auto;
+}
+input[type="range"]::-webkit-slider-thumb {
+  cursor: ew-resize; /* grab */
+}
+</style>
