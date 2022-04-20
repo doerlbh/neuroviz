@@ -4,6 +4,8 @@
 	import BarChart from './BarChart.svelte'
 	import Forecast from './Forecast.svelte'
 
+	
+
 	const API_URL = "https://api.weather.gov/gridpoints/OKX/33,37/forecast";
 	const MAX_SVG_WIDTH = 600;
 
@@ -14,7 +16,7 @@
 	};
 
 	let width = MAX_SVG_WIDTH;
-	let url = "/forecast"
+	let url = "./forecast"
 
 	const onResize = () => {
 		width = Math.min(MAX_SVG_WIDTH, window.innerWidth);
@@ -33,8 +35,8 @@
 <main>
 	<Router url="{url}">
 		<nav>
-			<Link to="/cards">Forecast Cards</Link>
-			<Link to="/bars">Bar Chart</Link>
+			<Link to="cards">Forecast Cards</Link>
+			<Link to="bars">Bar Chart</Link>
 		</nav>
 		<h4>This week's temperature chart</h4>
 		<div class='app-body'>
