@@ -26,10 +26,10 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: set working directory
-        run: export DIR="./lab/svelte-app"
+        run: export WORKDIR="./lab/svelte-app"
 
       - name: check working directory
-        run: echo $DIR
+        run: echo $WORKDIR
 
       - name: Install
         working-directory: ./lab/svelte-app
