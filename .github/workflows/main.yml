@@ -24,8 +24,6 @@ jobs:
     defaults:
       run:
         working-directory: ./lab/svelte-app
-      uses:
-        build_dir: ./lab/svelte-app/public
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -42,6 +40,6 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          # build_dir: ./lab/svelte-app/public
+          build_dir: ./lab/svelte-app/public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
