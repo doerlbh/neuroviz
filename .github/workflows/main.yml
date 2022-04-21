@@ -25,17 +25,17 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: go to project
-        run: cd lab/svelte-app; pwd
-
       - name: Install
+        working-directory: ./lab/svelte-app
         run: npm install
 
       - name: Build
+        working-directory: ./lab/svelte-app
         run: npm run build
 
       - name: Deploy to GitHub Pages
         if: success()
+        working-directory: ./lab/svelte-app
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
