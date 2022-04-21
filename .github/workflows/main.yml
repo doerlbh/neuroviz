@@ -24,7 +24,7 @@ jobs:
     defaults:
       run:
         working-directory: ./lab/svelte-app
-      with:
+      uses:
         build_dir: ./lab/svelte-app/public
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
