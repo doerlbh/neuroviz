@@ -20,19 +20,17 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
+
+    env:
+      WORKDIR: ./lab/svelte-app
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: set working directory
-        run: export WORKDIR="./lab/svelte-app"
-
-      - name: check working directory
-        run: echo $WORKDIR
-
       - name: Install
-        working-directory: ./lab/svelte-app
+        working-directory: $WORKDIR
         run: npm install
 
       - name: Build
