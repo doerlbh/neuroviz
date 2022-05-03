@@ -6,7 +6,7 @@ let loaded = false;
 
 export const fetchNeurodata = async () => {
 	if (loaded) return;
-	const url = `./data/neurodatasets.json`;
+	const url = `./neurodatasets.json`;
 	const res = await fetch(url);
 	const data = await res.json();
 	const loadedNeurodata = data.datasets.map((data, index) => ({
@@ -24,7 +24,7 @@ export const getNeurodataById = async (id) => {
 	if (neurodataDetails[id]) return neurodataDetails[id];
 
 	try {
-		const url = `./data/neurodatasets.json`;
+		const url = `./neurodatasets.json`;
 		const res = await fetch(url);
 		const data = await res.json();
 		const data_bit = data.datasets[id];

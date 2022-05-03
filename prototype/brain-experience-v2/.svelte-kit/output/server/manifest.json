@@ -1,0 +1,150 @@
+{
+  ".svelte-kit/build/index.js": {
+    "file": "index.js",
+    "src": ".svelte-kit/build/index.js",
+    "isEntry": true,
+    "imports": [
+      "_index-d88a766f.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/build/hooks.js"
+    ]
+  },
+  "src/routes/api/neurodata/index.js": {
+    "file": "entries/endpoints/api/neurodata/index.js",
+    "src": "src/routes/api/neurodata/index.js",
+    "isEntry": true
+  },
+  "src/routes/api/neurodata/[id].js": {
+    "file": "entries/endpoints/api/neurodata/_id_.js",
+    "src": "src/routes/api/neurodata/[id].js",
+    "isEntry": true,
+    "imports": [
+      "_neurostore-8d9cf2de.js",
+      "_index-5d0df34e.js",
+      "_index-d88a766f.js"
+    ]
+  },
+  "src/routes/__layout.svelte": {
+    "file": "entries/pages/__layout.svelte.js",
+    "src": "src/routes/__layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-d88a766f.js"
+    ],
+    "css": [
+      "assets/entries/pages/__layout.svelte-743abd50.css"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-d88a766f.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "entries/pages/index.svelte.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-d88a766f.js",
+      "_neurostore-8d9cf2de.js",
+      "_index-5d0df34e.js"
+    ]
+  },
+  "src/routes/visualization.svelte": {
+    "file": "entries/pages/visualization.svelte.js",
+    "src": "src/routes/visualization.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-d88a766f.js"
+    ],
+    "css": [
+      "assets/entries/pages/visualization.svelte-9cd0c1f4.css"
+    ]
+  },
+  "src/routes/neuroscience.svelte": {
+    "file": "entries/pages/neuroscience.svelte.js",
+    "src": "src/routes/neuroscience.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-d88a766f.js"
+    ]
+  },
+  "src/routes/references.svelte": {
+    "file": "entries/pages/references.svelte.js",
+    "src": "src/routes/references.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-d88a766f.js",
+      "_index-5d0df34e.js"
+    ]
+  },
+  "src/routes/neurodata/[id].svelte": {
+    "file": "entries/pages/neurodata/_id_.svelte.js",
+    "src": "src/routes/neurodata/[id].svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-d88a766f.js",
+      "_neurostore-8d9cf2de.js",
+      "_index-5d0df34e.js"
+    ]
+  },
+  "src/routes/Forecast.svelte": {
+    "file": "entries/pages/Forecast.svelte.js",
+    "src": "src/routes/Forecast.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-d88a766f.js"
+    ]
+  },
+  "src/routes/viz2.svelte": {
+    "file": "entries/pages/viz2.svelte.js",
+    "src": "src/routes/viz2.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-d88a766f.js"
+    ]
+  },
+  "src/routes/viz3.svelte": {
+    "file": "entries/pages/viz3.svelte.js",
+    "src": "src/routes/viz3.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-d88a766f.js"
+    ],
+    "css": [
+      "assets/entries/pages/viz3.svelte-afaedd04.css"
+    ]
+  },
+  "src/routes/App.svelte": {
+    "file": "entries/pages/App.svelte.js",
+    "src": "src/routes/App.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-d88a766f.js"
+    ]
+  },
+  "_index-d88a766f.js": {
+    "file": "chunks/index-d88a766f.js"
+  },
+  "_neurostore-8d9cf2de.js": {
+    "file": "chunks/neurostore-8d9cf2de.js",
+    "imports": [
+      "_index-5d0df34e.js"
+    ]
+  },
+  "_index-5d0df34e.js": {
+    "file": "chunks/index-5d0df34e.js",
+    "imports": [
+      "_index-d88a766f.js"
+    ]
+  },
+  ".svelte-kit/build/hooks.js": {
+    "file": "chunks/hooks-1c45ba0b.js",
+    "src": ".svelte-kit/build/hooks.js",
+    "isDynamicEntry": true
+  }
+}
