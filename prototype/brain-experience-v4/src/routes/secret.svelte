@@ -4,7 +4,7 @@
   import { selected_id, neurodata, fetchNeurodata } from "../neurostore";
   import { data } from "../routes/_data/allen_tiny_tiny_tiny.js";
 
-  import Vizzu from "$lib/Vizzu.svelte";
+//   import Vizzu from "$lib/Vizzu.svelte";
 
   import Slide from "$lib/Slide.svelte";
 	import Deck from "$lib/Deck.svelte";
@@ -125,47 +125,8 @@ selected_id.subscribe(value => {
 		<div
 			class="lg:w-11/24 w-22/24 animate__animated animate__fadeInLeft"
 		>
-			<Vizzu
-			    id='figure 2'
-				options={[
-
-(chart) => {
-	console.log(data.selected_one);
-	data.filter = record => record['stim_id'] === data.selected_one;
-chart.animate({
-		data:data,
-		config: {
-			channels: {
-				x: { set: ['time_point'] },
-				y: { set: ['brain_region'], range: { max: '120%' } },
-				color: { set: ['signal_val']},
-				size: { set: ['signal_val'] },
-	
-			},
-			geometry: 'circle',
-			title: `spatio-temporal encoding of image ` + data.selected_one +  ` in the brain`,
-		}, 
-});
-// chart.animate({
-//     data: {
-//         filter: record => 
-//             record["stim_id"] === data.selected_one
-//     },
-// });
-chart.animate({
-    style: {
-        title: {
-            fontSize: 20
-        }
-    }
-});
-chart.feature('tooltip',true);
-},
-
-
-				]}
-			/>
-		</div>
+		
+	</div>
 		<div class="lg:w-11/24 w-22/24 animate__animated animate__fadeInUp">
 			<p
 				class="font-sans font-bold text-sm text-blue-600 tracking-widest uppercase"

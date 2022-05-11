@@ -3,7 +3,7 @@ export const manifest = {
 	assets: new Set(["data/pubs.json","data/test.json","email.svg","map-marker.svg"]),
 	mimeTypes: {".json":"application/json",".svg":"image/svg+xml"},
 	_: {
-		entry: {"file":"start-a992682a.js","js":["start-a992682a.js","chunks/vendor-66f215a3.js"],"css":[]},
+		entry: {"file":"start-338132a8.js","js":["start-338132a8.js","chunks/vendor-66f215a3.js"],"css":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),

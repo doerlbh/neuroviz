@@ -1,10 +1,10 @@
 <script>
 	import Slide from "$lib/Slide.svelte";
 	import Deck from "$lib/Deck.svelte";
-	import Vizzu from "$lib/Vizzu.svelte";
-	import { data } from "./_data/allen_tiny_tiny_tiny.js";
+	// import Vizzu from "$lib/Vizzu.svelte";
+	// import { data } from "./_data/allen_tiny_tiny_tiny.js";
 
-	let interpretation = `What we are seeing now, is the signal value of many neurons recorded from the study where multiple participants view different images at different time points, colored by their brain regions.`;
+	let interpretation = ` dWhat we are seeing now, is the signal value of many neurons recorded from the study where multiple participants view different images at different time points, colored by their brain regions.`;
 
 	</script>
 
@@ -292,165 +292,8 @@
 			<div
 				class="lg:w-11/24 w-22/24 animate__animated animate__zoomIn"
 			>
-				<Vizzu
-					options={[
-
-						(chart) =>
-							{chart.animate({
-								data:data,
-    config: {
-        channels: {
-            y: { set: ['signal_val'] },
-            x: { set: ['brain_region','stim_id'] },
-			color: { set: ['brain_region'] },
-        },
-		title: 'brain activities in a glance',
-		coordSystem: "polar",
-		geometry: 'circle'
-    },						
-});
-chart.animate({
-    style: {
-        title: {
-            fontSize: 20
-        }
-    }
-});
-},
-
-(chart) =>
-	{chart.animate({
-    config: {
-		coordSystem: 'cartesian',
-    },						
-});
-interpretation = `When we unfold it, we can see that different brain regions are activated in different levels when viewing images. For instance, V1 (or the primary visual cortex), is the most activated brain region, suggesting that it is most functionally related to this perception sense.`
-chart.animate({
-    config: {
-		channels: {
-			x: { set: null },
-			y: { set: null },
-			size: { set: ['signal_val','stim_id']},
-        },
-		title: 'brain activities in different parts',
-		geometry: 'circle'
-    },							
-});
-chart.feature('tooltip',true);
-},
-
-(chart) => {
-chart.animate({
-    config: {
-        channels: {
-            y: { set: ['brain_region'] },
-            x: { set: ['signal_val', 'stim_id'], detach: ['stim_id'], attach: ['time_point'] },
-            label: { set: null },
-			size: { detach: ['stim_id'] },
-        },
-        title: 'brain activities in different parts',
-        geometry: 'rectangle',
-        orientation: 'vertical'
-    }
-},
-    {
-        geometry:
-        {
-            delay: 0.5,
-            duration: 1
-        }
-    });
-	chart.animate({
-    config: {
-        channels: {
-            x: {
-                range: {
-                    max: '100%'  
-                }
-            },
-            color: { set: ['time_point'] },
-            noop: { set: null }
-        },
-		title: 'brain activities across time points',
-        split: true,
-    }
-});
-chart.animate({
-    config: {
-        channels: {
-            x: {
-                range: {
-                    max: 'auto'
-                }
-            }
-        },
-        split: false
-    }
-});
-interpretation = `However, we don't know their causal link between their functions, at least not until we investigate the temporal sequence of these internal operations.`;
-},
-
-(chart) => {
-chart.animate({
-    config: {
-        title: 'different brain parts interact at different stages',
-        align: 'stretch'
-    }
-});
-interpretation = `We can see that different brain regions are activated unevenly across the time steps, and in different ways. In another word. they work at different rates and steps.`;
-},
-
-(chart) => {
-chart.animate({
-    config: {
-		channels: {
-            x: { attach: ['time_point'],detach: ['signal_val'] },
-            y: { detach: ['time_point'],attach: ['signal_val'] },
-			color: { set: ['brain_region']}
-        },
-        title: 'dynamics of brain regions processing information',
-		orientation: 'horizontal',
-		align: 'none'
-    }
-});
-chart.feature('tooltip',true);
-interpretation = `By comparing them both in their absolute and relative amplitude, neuroscientists may unravel the functional and causal attribution of different brain regions in the task.`;
-},
-
-(chart) => {
-chart.animate({
-    config: {
-		channels: {
-            x: { set: ['time_point'] },
-            y: { set: ['signal_val'] },
-			color: { set: ['brain_region']},
-			size: { set: null },
-        },
-		geometry: 'line'
-    }
-});
-chart.feature('tooltip',true);
-},
-
-(chart) => {
-chart.animate({
-    config: {
-		channels: {
-            x: { set: ['time_point'] },
-            y: { set: ['brain_region'], range: { max: '120%' } },
-			color: { set: ['signal_val']},
-			size: { set: ['signal_val']  },
-        },
-		geometry: 'circle',
-		title: 'spatio-temporal grid of visual perception in brain',
-    }
-});
-chart.feature('tooltip',true);
-interpretation = `Finally, we can visualize this spatio-temporal pattern with this visual synopsis that assigns a weight in different dynamic stages and anatomical structures.`;
-
-},
-					]}
-				/>
+				
+			
 			</div>
 		
 		</div>

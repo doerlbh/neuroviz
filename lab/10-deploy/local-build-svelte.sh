@@ -21,7 +21,7 @@ git commit -m "[local-build-svelte.sh] add /public for gh-pages branch" # OPTION
 git remote add origin $URL
 
 # push to the 'gh-pages' branch on your thesis repo
-git push origin main:gh-pages --force
+git push origin master:gh-pages --force
 
 # delete the temporary standalone repo
 rm -rf .git
