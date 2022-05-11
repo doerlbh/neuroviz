@@ -23,7 +23,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: ./prototype/brain-experience-v4
+        working-directory: ./prototype/final
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -40,6 +40,6 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          build_dir: ./prototype/brain-experience-v4/public
+          build_dir: ./prototype/final/build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
