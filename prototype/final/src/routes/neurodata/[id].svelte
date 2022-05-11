@@ -2,7 +2,6 @@
     <svelte:head>
       <script src="https://cdn.plot.ly/plotly-2.11.1.min.js" ></script>
     <title>Research Division | Stimulus {id}</title>
-    <link rel="icon" href="/favicon/favicon.ico" />
     </svelte:head>
 
 <script>
