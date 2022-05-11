@@ -4,8 +4,6 @@
   import { selected_id, neurodata, fetchNeurodata } from "../neurostore";
   import { data } from "../routes/_data/allen_tiny_tiny_tiny.js";
 
-  import Vizzu from "$lib/Vizzu.svelte";
-
   import Slide from "$lib/Slide.svelte";
 	import Deck from "$lib/Deck.svelte";
 
@@ -14,8 +12,6 @@
 
   let selected_one;
   data.selected_one = selected_one
-
-// TODO find a way to remount the prop, or just use [id].svelte
 
   let instruction = `Please select an actual image stimulus to activate the full brain regions.`
 
@@ -26,7 +22,7 @@ selected_id.subscribe(value => {
   $: {
     if (searchTerm) {
       filteredNeurodata = $neurodata.filter((neurodata) =>
-        neurodata.name.toLowerCase().includes(searchTerm.toLowerCase())
+        neurodata.name.toLowerCase().includes(searchTerm.toLowerCase()) || neurodata.first_label.toLowerCase().includes(searchTerm.toLowerCase()) || neurodata.second_label.toLowerCase().includes(searchTerm.toLowerCase())
       );
     } else {
       filteredNeurodata = [...$neurodata];
@@ -116,76 +112,5 @@ selected_id.subscribe(value => {
 </div>
 
 </Slide>
-
-
-<Slide>
-	<div
-		class="flex flex-wrap justify-evenly items-center mx-auto max-w-22/24 pt-20"
-	>
-		<div
-			class="lg:w-11/24 w-22/24 animate__animated animate__fadeInLeft"
-		>
-			<Vizzu
-			    id='figure 2'
-				options={[
-
-(chart) => {
-	console.log(data.selected_one);
-	data.filter = record => record['stim_id'] === data.selected_one;
-chart.animate({
-		data:data,
-		config: {
-			channels: {
-				x: { set: ['time_point'] },
-				y: { set: ['brain_region'], range: { max: '120%' } },
-				color: { set: ['signal_val']},
-				size: { set: ['signal_val'] },
-	
-			},
-			geometry: 'circle',
-			title: `spatio-temporal encoding of image ` + data.selected_one +  ` in the brain`,
-		}, 
-});
-// chart.animate({
-//     data: {
-//         filter: record => 
-//             record["stim_id"] === data.selected_one
-//     },
-// });
-chart.animate({
-    style: {
-        title: {
-            fontSize: 20
-        }
-    }
-});
-chart.feature('tooltip',true);
-},
-
-
-				]}
-			/>
-		</div>
-		<div class="lg:w-11/24 w-22/24 animate__animated animate__fadeInUp">
-			<p
-				class="font-sans font-bold text-sm text-blue-600 tracking-widest uppercase"
-			>
-				Visualization
-			</p>
-			<h1
-				class="font-sans font-black text-neutral-900 text-5xl text-left mt-8 tracking-tighter"
-			>
-				What happens when the brain sees an image
-			</h1>
-			<p
-				class="font-sans font-light text-xl text-gray-500 mt-8 leading-relaxed"
-			>
-				Interpretation of the visualization here...
-			</p>
-
-		</div>
-	</div>
-</Slide>
-
 
 </Deck>

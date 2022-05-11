@@ -4,7 +4,8 @@
 	import Vizzu from "$lib/Vizzu.svelte";
 	import { data } from "./_data/allen_tiny_tiny_tiny.js";
 
-	let interpretation = `What we are seeing now, is the signal value of many neurons recorded from the study where multiple participants view different images at different time points, colored by their brain regions.`;
+	let interpretation = `What are the teams at play when the brain sees an image?`
+	let interpretation2 = `What we are seeing now, is the signal value of many neurons recorded from the study where multiple participants view different images at different time points, colored by their brain regions.`;
 
 	</script>
 
@@ -121,7 +122,7 @@
 						<h2
 							class="font-sans font-semibold text-neutral-900 text-2xl tracking-tighter leading-none"
 						>
-						 Experimental approaches
+						 Experiments
 						</h2>
 						<p
 							class="font-sans font-light text-gray-500 mt-4 leading-relaxed"
@@ -138,7 +139,7 @@
 					<h2
 						class="font-sans font-semibold text-neutral-900  text-2xl tracking-tighter leading-none"
 					>
-						Data collection methods
+						Data collection
 					</h2>
 					<p
 						class="font-sans font-light text-gray-500 mt-4 leading-relaxed"
@@ -156,9 +157,9 @@
 					class="i-openmoji-magnifying-glass-tilted-right mt-6 text-5xl"
 				/>
 				<h2
-					class="font-sans font-semibold text-neutral-900 text-2xl tracking-tighter leading-none"
+					class="font-sans font-semibold text-neutral-900 text-2xl tracking-tighter leading-none mt-10"
 				>
-					Computational approaches
+					Analysis
 				</h2>
 				<p
 					class="font-sans font-light text-gray-500 mt-4 leading-relaxed"
@@ -172,18 +173,18 @@
 					 <div
 						class="w-23/24 md:w-11/24 animate__animated op0 start-4:op100 start-4:animate__fadeInRight"
 					>
-						<div class="i-openmoji-spider-web text-5xl mt-6 " />
+						<div class="i-openmoji-spider-web text-5xl mt-6" />
 						<h2
-							class="font-sans font-semibold text-neutral-900 text-2xl tracking-tighter leading-none"
+							class="font-sans font-semibold text-neutral-900 text-2xl tracking-tighter leading-none mt-10"
 						>
-							Inference techniques
+							Inference
 						</h2>
 						<p
 							class="font-sans font-light text-gray-500 mt-4 leading-relaxed"
 						>
 						&bull; Representational similarity analysis  <br>
 						&bull; Deep neural networks <br>
-						&bull; Theoretical neuroscience modeling
+						&bull; Theoretical modeling
 						</p>
 					</div>
 				</div>
@@ -192,14 +193,14 @@
 	</Slide>
 
 	<Slide>
-		<div class="flex flex-col min-h-screen pt-15 center">
+		<div class="flex flex-col min-h-screen items-center justify-center md:w-9/10 w-10/10 mx-auto">
 		<p
 					class="font-sans font-bold text-sm text-blue-600 tracking-widest uppercase"
 				>
 					Method
 				</p>
 				<h1
-					class="font-sans font-black text-neutral-900 text-4xl text-left mt-8 tracking-tighter"
+					class="font-sans font-black text-neutral-900 text-4xl mt-8 tracking-tighter"
 				>
 					Into our visual perception problem.
 				</h1>
@@ -212,11 +213,13 @@
 					<h2
 						class="font-sans font-semibold text-neutral-900 mt-6 text-2xl tracking-tighter leading-none"
 					>
-					We want to study major visual cortical areas in the brain and how they operate when viewing scenes of naturalistic conditions. 
+					<!-- We want to study:  -->
 					</h2>
 					<p
 						class="font-sans font-normal text-lg text-gray-500 mt-8 leading-relaxed"
 					>
+					We want to study major visual cortical areas in the brain and how they operate when viewing scenes of naturalistic conditions. 
+					<br>
 					To investigate this question, we collect brain activity data from the subjects when they are viewing a series of images. In this case, to examine the cellular responses to natural stimuli, the images being used consist of a library of 118 natural scenes, selected from three different databases (Berkeley Segmentation Dataset, van Hateren Natural Image Dataset and McGill Calibrated Colour Image Database). A scene image was presented briefly (250 ms) then replaced with the next scene image. Each image was presented 50 times, in a random order, with intermittent blank intervals.
 					</p>
 				</div>
@@ -265,7 +268,7 @@
 		<div
 			class="flex flex-wrap justify-evenly items-center mx-auto max-w-22/24 pt-20"
 		>
-		<div class="xl:w-11/24 w-22/24">
+		<div class="xl:w-10/24 w-22/24">
 			<p
 				class="font-sans font-bold text-sm text-blue-600 tracking-widest uppercase"
 			>
@@ -274,7 +277,7 @@
 			<h1
 				class="animate__animated animate__fadeIn font-sans font-black text-neutral-900 text-4xl text-left mt-8 tracking-tighter"
 			>
-			What are the teams at play when the brain sees an image?
+			{interpretation}
 			</h1>
 			
 			<p				class="font-sans font-light text-l text-gray-500 mt-8 leading-relaxed"
@@ -284,13 +287,13 @@
 		</p>
 		<p				class="font-sans font-light text-l text-gray-500 mt-8 leading-relaxed"
 		>
-		{interpretation}
+		{interpretation2}
 		<br>
 	</p>
 		</div>
 
 			<div
-				class="lg:w-11/24 w-22/24 animate__animated animate__zoomIn"
+				class="lg:w-12/24 w-22/24 animate__animated animate__zoomIn"
 			>
 				<Vizzu
 					options={[
@@ -324,7 +327,8 @@ chart.animate({
 		coordSystem: 'cartesian',
     },						
 });
-interpretation = `When we unfold it, we can see that different brain regions are activated in different levels when viewing images. For instance, V1 (or the primary visual cortex), is the most activated brain region, suggesting that it is most functionally related to this perception sense.`
+interpretation2 = ``;
+interpretation = `When we unfold it, we can see that different brain regions are activated in different levels when viewing images. E.g. V1 is the most activated brain region, suggesting that it is most functionally related to this perception sense.`
 chart.animate({
     config: {
 		channels: {
@@ -462,7 +466,7 @@ interpretation = `Finally, we can visualize this spatio-temporal pattern with th
 		<div
 			class="flex flex-wrap justify-evenly items-center mx-auto max-w-22/24 pt-20"
 		>
-			<div class="lg:w-11/24 w-22/24 mb-8">
+			<div class="lg:w-11/24 w-22/24">
 				<p
 					class="font-sans font-bold text-sm text-blue-600 tracking-widest uppercase"
 				>
@@ -476,9 +480,13 @@ interpretation = `Finally, we can visualize this spatio-temporal pattern with th
 				<p
 					class="font-sans font-light text-l text-gray-500 mt-8 leading-relaxed"
 				>
-					Some more information
+				A fundamental challenge for cognitive and systems neuroscience is to quantitatively relate its three major branches of research: brain-activity measurement, behavioral measurement and computational modeling.
+
+				And to learn how cognition is implemented in the brain, we must build computational models that can perform cognitive tasks, and test such models with brain and behavioral experiments.
 				
 				</p>
+
+				
 			</div>
 			<div class="lg:w-11/24 w-22/24">
 				<lottie-player
@@ -490,6 +498,35 @@ interpretation = `Finally, we can visualize this spatio-temporal pattern with th
 				/>
 			</div>
 		</div>
+
+		<div
+		class="flex flex-wrap justify-evenly items-center mx-auto max-w-22/24 pt-20 mb-8"
+	>
+	<div class="lg:w-7/24 w-7/24 justify-left op0 start-1:op100 animate__animated start-1:animate__fadeInLeft">
+		<img src="vision_space.png" alt="visual_space" class="w-70 mx-auto" />
+	</div>
+
+	<div class="lg:w-8/24 w-8/24">
+
+		<p
+			class="font-sans font-light text-l text-gray-500 mt-8 leading-relaxed op0 start-1:op100 animate__animated start-1:animate__fadeIn"
+		>
+		Even in the subproblem of the visual processing, here are various mechanisms and dimensions that are the topics of active research, waiting to be gradually uncovered. 
+		</p>
+
+		<p
+		class="font-sans font-light text-l text-gray-500 mt-8 leading-relaxed op0 start-1:op100 animate__animated start-2:animate__fadeIn"
+	>
+	From the perception to cognition, there are also more layers of subtlety, such as the attention mechanisms and contextual information in real world scenarios.
+	</p>
+
+	</div>
+
+	<div class="lg:w-8/24 w-8/24 mb-8 op0 start-1:op100 animate__animated start-2:animate__fadeInRight">
+		<img src="attention.png" alt="attention" class="w-70 mx-auto" />
+	</div>
+</div>
+	
 	</Slide>
 
 

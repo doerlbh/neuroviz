@@ -1,23 +1,7 @@
 <script>
-  import NeurodataCard from "../components/neurodataCard.svelte";
-  import { neurodata, fetchNeurodata } from "../neurostore";
   import Slide from "$lib/Slide.svelte";
 	import Deck from "$lib/Deck.svelte";
 
-  let searchTerm = "";
-  let filteredNeurodata = [];
-
-  $: {
-    if (searchTerm) {
-      filteredNeurodata = $neurodata.filter((neurodata) =>
-        neurodata.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    } else {
-      filteredNeurodata = [...$neurodata];
-    }
-  }
-
-  fetchNeurodata();
 </script>
 
 
@@ -85,7 +69,7 @@
 			<p
 				class="font-sans font-light text-l text-gray-500 mt-8 leading-relaxed"
 			>
-				Some more information
+				Recent studies have suggested that the deep neural networks resembles the brain in many ways, both anatomically and functionally. As a result, we can potentially train deep learning models to mimic the functional activity profiles of our brain. Now that we have these brain "emulators", we can potentially simulate brain-like response patterns corresponding to new visual inputs, such as an unseen image.
 			
 			</p>
 		</div>
@@ -99,30 +83,6 @@
 			/>
 		</div>
 	</div>
-</Slide>
-
-
-<Slide>
-
-<h1 class="text-2xl md:text-4xl text-center my-8">
-  <span class="font-semibold">Emulation Bank</span>
-</h1>
-
-<p class="text-base md:text-lg">
-  Pick a dataset to visualization <br /><br />
-</p>
-
-<input
-  class="w-full rounded-md text-lg p-4 border-2 border-gray-200"
-  bind:value={searchTerm}
-  placeholder="Search a project"
-/>
-<div class="py-4 grid gap-4 md:grid-cols-3 grid-cols-1">
-  {#each filteredNeurodata as neurodata}
-    <NeurodataCard {neurodata} />
-  {/each}
-</div>
-
 </Slide>
 
 

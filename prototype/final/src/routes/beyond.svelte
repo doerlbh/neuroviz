@@ -85,7 +85,7 @@
 			<p
 				class="font-sans font-light text-l text-gray-500 mt-8 leading-relaxed"
 			>
-			 Some information about computational neuroscience
+			Computational neuroscience is the field of study in which mathematical tools and theories are used to investigate brain function. It can also incorporate diverse approaches from electrical engineering, computer science and physics in order to understand how the nervous system processes information.
 			
 			</p>
 		</div>
@@ -100,7 +100,7 @@
 		</div>
 	</div>
 </Slide>
-
+<!-- 
 <Slide>
 
 <h1 class="text-2xl md:text-4xl text-center my-8">
@@ -122,5 +122,5 @@
   {/each}
 </div>
 
-</Slide>
+</Slide> -->
 </Deck>
