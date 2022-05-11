@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-7d46b830.js",
+    "file": "start-2d5abf5a.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -76,14 +76,14 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-e97e8a74.js",
+    "file": "pages/index.svelte-61f89364.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-d10faf1d.js",
       "_Deck-26ac5cae.js",
-      "_Vizzu-fd76d530.js",
+      "_Vizzu-a401f196.js",
       "_index-c1bb3979.js"
     ]
   },
@@ -97,14 +97,14 @@
     ]
   },
   "src/routes/secret.svelte": {
-    "file": "pages/secret.svelte-c661c3c3.js",
+    "file": "pages/secret.svelte-cfb9ad40.js",
     "src": "src/routes/secret.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-d10faf1d.js",
       "_neurodataCard-cd6d4399.js",
-      "_Vizzu-fd76d530.js",
+      "_Vizzu-a401f196.js",
       "_Deck-26ac5cae.js",
       "_index-c1bb3979.js"
     ]
@@ -135,8 +135,8 @@
       "assets/Deck-c4f45653.css"
     ]
   },
-  "_Vizzu-fd76d530.js": {
-    "file": "chunks/Vizzu-fd76d530.js",
+  "_Vizzu-a401f196.js": {
+    "file": "chunks/Vizzu-a401f196.js",
     "imports": [
       "_index-d10faf1d.js"
     ]
