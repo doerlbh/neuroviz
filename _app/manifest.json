@@ -1,11 +1,11 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-fc3cbeae.js",
+    "file": "start-c153bc91.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-d10faf1d.js",
-      "_index-c1bb3979.js"
+      "_index-2a10ab7e.js",
+      "_index-bbe23381.js"
     ],
     "dynamicImports": [
       "src/routes/__layout.svelte",
@@ -15,130 +15,152 @@
       "src/routes/emulation.svelte",
       "src/routes/index.svelte",
       "src/routes/neurodata/[id].svelte",
-      "src/routes/secret.svelte"
+      "src/routes/secret.svelte",
+      "src/routes/singleviz.svelte"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-a630541d.js",
+    "file": "pages/__layout.svelte-bf48d7af.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d10faf1d.js"
+      "_index-2a10ab7e.js"
     ],
     "css": [
       "assets/pages/__layout.svelte-7e069fd7.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-b6ddbbe0.js",
+    "file": "error.svelte-5348c1f8.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d10faf1d.js"
+      "_index-2a10ab7e.js"
     ]
   },
   "src/routes/about.svelte": {
-    "file": "pages/about.svelte-3d894019.js",
+    "file": "pages/about.svelte-6cf08a91.js",
     "src": "src/routes/about.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d10faf1d.js",
-      "_neurodataCard-cd6d4399.js",
-      "_Deck-26ac5cae.js",
-      "_index-c1bb3979.js"
+      "_index-2a10ab7e.js",
+      "_neurodataCard-5cb8c291.js",
+      "_neurostore-075f6ea3.js",
+      "_Deck-26b8741d.js",
+      "_index-bbe23381.js"
     ]
   },
   "src/routes/beyond.svelte": {
-    "file": "pages/beyond.svelte-ae3cda9b.js",
+    "file": "pages/beyond.svelte-9aec54c4.js",
     "src": "src/routes/beyond.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d10faf1d.js",
-      "_neurodataCard-cd6d4399.js",
-      "_Deck-26ac5cae.js",
-      "_index-c1bb3979.js"
+      "_index-2a10ab7e.js",
+      "_neurostore-075f6ea3.js",
+      "_Deck-26b8741d.js",
+      "_index-bbe23381.js"
     ]
   },
   "src/routes/emulation.svelte": {
-    "file": "pages/emulation.svelte-9451f36e.js",
+    "file": "pages/emulation.svelte-5f971cce.js",
     "src": "src/routes/emulation.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d10faf1d.js",
-      "_neurodataCard-cd6d4399.js",
-      "_Deck-26ac5cae.js",
-      "_index-c1bb3979.js"
+      "_index-2a10ab7e.js",
+      "_Deck-26b8741d.js",
+      "_index-bbe23381.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-61f89364.js",
+    "file": "pages/index.svelte-2b92eac1.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d10faf1d.js",
-      "_Deck-26ac5cae.js",
-      "_Vizzu-a401f196.js",
-      "_index-c1bb3979.js"
+      "_index-2a10ab7e.js",
+      "_Deck-26b8741d.js",
+      "_allen_tiny_tiny_tiny-89c4da63.js",
+      "_index-bbe23381.js"
     ]
   },
   "src/routes/neurodata/[id].svelte": {
-    "file": "pages/neurodata/_id_.svelte-d2864dcc.js",
+    "file": "pages/neurodata/_id_.svelte-9c8a0672.js",
     "src": "src/routes/neurodata/[id].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d10faf1d.js"
+      "_index-2a10ab7e.js",
+      "_Deck-26b8741d.js",
+      "src/routes/singleviz.svelte",
+      "_index-bbe23381.js",
+      "_allen_tiny_tiny_tiny-89c4da63.js"
+    ]
+  },
+  "src/routes/singleviz.svelte": {
+    "file": "pages/singleviz.svelte-db197f00.js",
+    "src": "src/routes/singleviz.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-2a10ab7e.js",
+      "_allen_tiny_tiny_tiny-89c4da63.js"
+    ],
+    "css": [
+      "assets/pages/singleviz.svelte-e85d42f1.css"
     ]
   },
   "src/routes/secret.svelte": {
-    "file": "pages/secret.svelte-cfb9ad40.js",
+    "file": "pages/secret.svelte-868a836d.js",
     "src": "src/routes/secret.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-d10faf1d.js",
-      "_neurodataCard-cd6d4399.js",
-      "_Vizzu-a401f196.js",
-      "_Deck-26ac5cae.js",
-      "_index-c1bb3979.js"
+      "_index-2a10ab7e.js",
+      "_neurodataCard-5cb8c291.js",
+      "_neurostore-075f6ea3.js",
+      "_allen_tiny_tiny_tiny-89c4da63.js",
+      "_Deck-26b8741d.js",
+      "_index-bbe23381.js"
     ]
   },
-  "_index-d10faf1d.js": {
-    "file": "chunks/index-d10faf1d.js"
+  "_index-2a10ab7e.js": {
+    "file": "chunks/index-2a10ab7e.js"
   },
-  "_index-c1bb3979.js": {
-    "file": "chunks/index-c1bb3979.js",
+  "_index-bbe23381.js": {
+    "file": "chunks/index-bbe23381.js",
     "imports": [
-      "_index-d10faf1d.js"
+      "_index-2a10ab7e.js"
     ]
   },
-  "_neurodataCard-cd6d4399.js": {
-    "file": "chunks/neurodataCard-cd6d4399.js",
+  "_neurodataCard-5cb8c291.js": {
+    "file": "chunks/neurodataCard-5cb8c291.js",
     "imports": [
-      "_index-d10faf1d.js",
-      "_index-c1bb3979.js"
+      "_index-2a10ab7e.js",
+      "_neurostore-075f6ea3.js"
     ]
   },
-  "_Deck-26ac5cae.js": {
-    "file": "chunks/Deck-26ac5cae.js",
+  "_neurostore-075f6ea3.js": {
+    "file": "chunks/neurostore-075f6ea3.js",
     "imports": [
-      "_index-d10faf1d.js",
-      "_index-c1bb3979.js"
+      "_index-bbe23381.js"
+    ]
+  },
+  "_Deck-26b8741d.js": {
+    "file": "chunks/Deck-26b8741d.js",
+    "imports": [
+      "_index-2a10ab7e.js",
+      "_index-bbe23381.js"
     ],
     "css": [
       "assets/Deck-c4f45653.css"
     ]
   },
-  "_Vizzu-a401f196.js": {
-    "file": "chunks/Vizzu-a401f196.js",
-    "imports": [
-      "_index-d10faf1d.js"
-    ]
+  "_allen_tiny_tiny_tiny-89c4da63.js": {
+    "file": "chunks/allen_tiny_tiny_tiny-89c4da63.js"
   }
 }
