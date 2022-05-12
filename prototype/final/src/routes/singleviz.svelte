@@ -1,6 +1,7 @@
 <script>
 	import Charts from '$lib/Charts.svelte';
-	let id = Math.floor(Math.random() * 117) + 1;
+	export let id = 1;
+	// let id = Math.floor(Math.random() * 117) + 1;
 
 	import { data } from './_data/allen_tiny_tiny_tiny.js';
 	let neurodatum = data.records;

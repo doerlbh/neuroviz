@@ -42,7 +42,9 @@
 			<p
 				class="font-sans font-normal text-center text-lg text-gray-500 max-w-4/6 mx-auto leading-relaxed"
 			>
-				A journey towards the inner self of your brain, brought to you by <b><a href="https://www.baihan.org/">Baihan Lin</a></b>.
+				A journey towards the inner self of your brain, brought to you by <b
+					><a href="https://www.baihan.org/">Baihan Lin</a></b
+				>.
 			</p>
 			<p
 				class="font-sans font-normal text-center text-lg text-gray-300 max-w-4/6 mx-auto leading-relaxed"
