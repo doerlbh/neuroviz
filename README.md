@@ -1,6 +1,8 @@
 # The Brain Experience
 
-By Baihan Lin &copy; 2022, All Rights Reserved.
+By [Baihan Lin ](https://www.baihan.org/ "Baihan Lin")&copy; 2022, All Rights Reserved.
+
+Website: [https://howbrain.work/]()
 
 <br>
 
@@ -20,8 +22,8 @@ In The Brain Experience, the data visualization enables the users to experience 
 
 This project will:
 
-- introduce the foundations of the perception process of the brains with visual storytelling and 
-- visualize the dynamic process of how different brain regions interact to perform these cognitive tasks, 
+- introduce the foundations of the perception process of the brains with visual storytelling and
+- visualize the dynamic process of how different brain regions interact to perform these cognitive tasks,
 
 <br>
 
@@ -31,23 +33,35 @@ This project will:
 
 in order to help thereaders understand *how the human brains process information in an organized, systematic and hierarchical way*, so that they can:
 
-1. have a knowledge of the underlying mechanisms when they perform daily tasks; 
+1. have a knowledge of the underlying mechanisms when they perform daily tasks;
 2. gain access to one of the research frontiers in the fields of cognitive and computational neuroscience;
-3. come up with new research questions and pursue a scientific research; 
-4. build better neural network structures inspired by these neuroscientific discoveries; and 
-5. revisit their philosophical stances of life about how our consciousness and thinking processes are formed. 
+3. come up with new research questions and pursue a scientific research;
+4. build better neural network structures inspired by these neuroscientific discoveries; and
+5. revisit their philosophical stances of life about how our consciousness and thinking processes are formed.
 
-<br><br>
+`<br><br>`
 
 **Research Outline**:
 
 ![research-map](./assets/research-map.png)
 
-<br>
+`<br><br>`
 
-<br>
+**Design Outline**:
+
+![initial-design](./assets/initial-design.png)
+
+`<br><br>`
+
+**Design Wireframe**:
+
+![wireframe](./assets/wireframe.png)
+
+`<br><br>`
 
 **References** (ongoing):
 
-- Lin, Baihan, et al. "Visualizing representational dynamics with multidimensional scaling alignment." *arXiv preprint arXiv:1906.09264* (2019).
-
+- Lin, Baihan, Marieke Mur, Tim Kietzmann, and Nikolaus Kriegeskorte. "Visualizing representational dynamics with multidimensional scaling alignment." *arXiv preprint arXiv:1906.09264* (2019).
+- Kriegeskorte, N., & Kievit, R. A. (2013). Representational geometry: integrating cognition, computation, and the brain. *Trends in cognitive sciences*, *17*(8), 401-412.
+- de Vries, Saskia EJ, Jerome A. Lecoq, Michael A. Buice, Peter A. Groblewski, Gabriel K. Ocker, Michael Oliver, David Feng et al. "A large-scale standardized physiological survey reveals functional organization of the mouse visual cortex." *Nature neuroscience* 23, no. 1 (2020): 138-151.
+- Kriegeskorte, Nikolaus. "Deep neural networks: a new framework for modeling biological vision and brain information processing." *Annual review of vision science* 1 (2015): 417-446.
