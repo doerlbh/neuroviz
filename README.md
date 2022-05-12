@@ -1,9 +1,11 @@
 # The Brain Experience
 
 By [Baihan Lin](https://www.baihan.org/ "Baihan Lin") &copy; 2022, All Rights Reserved.
-
-Website: [howbrain.work](https://howbrain.work/ "howbrain.work")
-
+   
+Live ebsite: [howbrain.work](https://howbrain.work/ "howbrain.work")
+    
+Demo video: [https://youtu.be/T88bKQzu0P4](https://youtu.be/T88bKQzu0P4 "https://youtu.be/T88bKQzu0P4")
+    
 <br>
 
 <br>
