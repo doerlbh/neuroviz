@@ -1,69 +1,70 @@
 <script>
-  import NeurodataCard from "../components/neurodataCard.svelte";
-//   import NeurovizCard from "../components/neurovizCard.svelte";
-  import { selected_id, neurodata, fetchNeurodata } from "../neurostore";
-  import { data } from "../routes/_data/allen_tiny_tiny_tiny.js";
+	import NeurodataCard from '../components/neurodataCard.svelte';
+	//   import NeurovizCard from "../components/neurovizCard.svelte";
+	import { selected_id, neurodata, fetchNeurodata } from '../neurostore';
+	import { data } from '../routes/_data/allen_tiny_tiny_tiny.js';
 
-  import Slide from "$lib/Slide.svelte";
-	import Deck from "$lib/Deck.svelte";
+	import Slide from '$lib/Slide.svelte';
+	import Deck from '$lib/Deck.svelte';
 
-  let searchTerm = "";
-  let filteredNeurodata = [];
+	let searchTerm = '';
+	let filteredNeurodata = [];
 
-  let selected_one;
-  data.selected_one = selected_one
+	let selected_one;
+	data.selected_one = selected_one;
 
-  let instruction = `Please select an actual image stimulus to activate the full brain regions.`
+	let instruction = `Please select an actual image stimulus to activate the full brain regions.`;
 
-selected_id.subscribe(value => {
-	selected_one = String(value);
-});
+	selected_id.subscribe((value) => {
+		selected_one = String(value);
+	});
 
-  $: {
-    if (searchTerm) {
-      filteredNeurodata = $neurodata.filter((neurodata) =>
-        neurodata.name.toLowerCase().includes(searchTerm.toLowerCase()) || neurodata.first_label.toLowerCase().includes(searchTerm.toLowerCase()) || neurodata.second_label.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    } else {
-      filteredNeurodata = [...$neurodata];
-    }
-  }
+	$: {
+		if (searchTerm) {
+			filteredNeurodata = $neurodata.filter(
+				(neurodata) =>
+					neurodata.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+					neurodata.first_label.toLowerCase().includes(searchTerm.toLowerCase()) ||
+					neurodata.second_label.toLowerCase().includes(searchTerm.toLowerCase())
+			);
+		} else {
+			filteredNeurodata = [...$neurodata];
+		}
+	}
 
-  $: {
-	  console.log(selected_one)
-	  if (selected_one != -1) {
-		filteredNeurodata = $neurodata.filter((neurodata) =>
-		neurodata.id == selected_one
-		);
-		instruction = `You have selected an image stimuli. Please proceed to the next page to see what's under the hood.`
-	  }
-	  data.selected_one = selected_one
-  }
+	$: {
+		console.log(selected_one);
+		if (selected_one != -1) {
+			filteredNeurodata = $neurodata.filter((neurodata) => neurodata.id == selected_one);
+			instruction = `You have selected an image stimuli. Please proceed to the next page to see what's under the hood.`;
+		}
+		data.selected_one = selected_one;
+	}
 
-  fetchNeurodata();
+	fetchNeurodata();
 </script>
 
-
 <nav class="flex justify-end w-full">
-	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-300 md:text-lg hover:scale-110" href="./">Journey</a>
+	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-300 md:text-lg hover:scale-110" href="./"
+		>Journey</a
+	>
 	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-400 md:text-lg hover:scale-110" href="./secret"
-	  >Secret</a
+		>Secret</a
 	>
 	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-300 md:text-lg hover:scale-110" href="./emulation"
-	  >Emulation</a
+		>Emulation</a
 	>
 	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-300 md:text-lg hover:scale-110" href="./beyond"
-	  >Beyond</a
+		>Beyond</a
 	>
 	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-300 md:text-lg hover:scale-110" href="./about"
-	>?</a
-  >
-  </nav>
+		>?</a
+	>
+</nav>
 
-  <svelte:head>
+<svelte:head>
 	<title>Brain Experience | Secret</title>
-  </svelte:head>
-
+</svelte:head>
 
 <Deck>
 	<Slide>
@@ -76,8 +77,8 @@ selected_id.subscribe(value => {
 			<p
 				class="font-sans font-normal text-center text-lg text-gray-500 max-w-4/6 mx-auto leading-relaxed"
 			>
-		The nits and grits behind the experience of individual perception.
-		</p>
+				The nits and grits behind the experience of individual perception.
+			</p>
 
 			<p
 				class="font-sans font-normal text-center text-lg text-gray-300 max-w-4/6 mx-auto leading-relaxed"
@@ -87,30 +88,28 @@ selected_id.subscribe(value => {
 		</div>
 	</Slide>
 
-<Slide>
+	<Slide>
+		<h1 class="text-2xl md:text-4xl text-center my-8">
+			How does the brain operate when facing different stimulations?
+		</h1>
 
-<h1 class="text-2xl md:text-4xl text-center my-8">
-  How does the brain operate when facing different stimulations?
-</h1>
+		<p id="instruction_info" class="text-base md:text-lg text-center">
+			<b>Instructions:</b>
+			{instruction} <br /><br />
+		</p>
 
-<p id='instruction_info' class="text-base md:text-lg text-center">
-  <b>Instructions:</b> {instruction} <br /><br />
-</p>
-
-<input
-  class="w-full rounded-md text-lg p-4 border-2 border-gray-200"
-  bind:value={searchTerm}
-  placeholder="Input a keyword for searching"
-/>
-<div class="py-4 grid gap-4 md:grid-cols-3 grid-cols-1">
-  {#each filteredNeurodata as neurodata}
-    <NeurodataCard {neurodata} />
-  {/each}
-  <!-- <div class='hidden start-1:grid'>
+		<input
+			class="w-full rounded-md text-lg p-4 border-2 border-gray-200"
+			bind:value={searchTerm}
+			placeholder="Input a keyword for searching"
+		/>
+		<div class="py-4 grid gap-4 md:grid-cols-3 grid-cols-1">
+			{#each filteredNeurodata as neurodata}
+				<NeurodataCard {neurodata} />
+			{/each}
+			<!-- <div class='hidden start-1:grid'>
 	<NeurovizCard {selected_one} />
 </div> -->
-</div>
-
-</Slide>
-
+		</div>
+	</Slide>
 </Deck>

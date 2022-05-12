@@ -1,16 +1,15 @@
 /** @type {import('./[id]').RequestHandler} */
 export async function get({ params }) {
-  let id = params.id;
+	let id = params.id;
 
-  if (id) {
-    return {
-        status: 200,
-        body: { id }
-    };
-  }
- 
-  return {
-    status: 404
-  };
+	if (id) {
+		return {
+			status: 200,
+			body: { id }
+		};
+	}
 
+	return {
+		status: 404
+	};
 }

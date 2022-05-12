@@ -1,34 +1,31 @@
 <script>
-  import Slide from "$lib/Slide.svelte";
-	import Deck from "$lib/Deck.svelte";
-
+	import Slide from '$lib/Slide.svelte';
+	import Deck from '$lib/Deck.svelte';
 </script>
 
-
 <nav class="flex justify-end w-full">
-	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-300 md:text-lg hover:scale-110" href="./">Journey</a>
+	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-300 md:text-lg hover:scale-110" href="./"
+		>Journey</a
+	>
 	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-300 md:text-lg hover:scale-110" href="./secret"
-	  >Secret</a
+		>Secret</a
 	>
 	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-400 md:text-lg hover:scale-110" href="./emulation"
-	  >Emulation</a
+		>Emulation</a
 	>
 	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-300 md:text-lg hover:scale-110" href="./beyond"
-	  >Beyond</a
+		>Beyond</a
 	>
 	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-300 md:text-lg hover:scale-110" href="./about"
-	>?</a
-  >
-  </nav>
+		>?</a
+	>
+</nav>
 
-  <svelte:head>
+<svelte:head>
 	<title>Brain Experience | Emulation</title>
-  </svelte:head>
-
+</svelte:head>
 
 <Deck>
-
-
 	<Slide>
 		<div class="flex flex-col min-h-screen justify-center">
 			<h1
@@ -39,51 +36,43 @@
 			<p
 				class="font-sans font-normal text-center text-lg text-gray-500 max-w-4/6 mx-auto leading-relaxed"
 			>
-		What happens when the brain sees you?
-		</p>
+				What happens when the brain sees you?
+			</p>
 
 			<p
 				class="font-sans font-normal text-center text-lg text-gray-300 max-w-4/6 mx-auto leading-relaxed"
 			>
-			Please press the right-left key to navigate the journey.
-		</p>
+				Please press the right-left key to navigate the journey.
+			</p>
 		</div>
 	</Slide>
 
-
-<Slide>
-	<div
-		class="flex flex-wrap justify-evenly items-center mx-auto max-w-22/24 pt-20"
-	>
-		<div class="lg:w-11/24 w-22/24 mb-8">
-			<p
-				class="font-sans font-bold text-sm text-blue-600 tracking-widest uppercase"
-			>
-				Next steps
-			</p>
-			<h1
-				class="font-sans font-black text-neutral-900 text-4xl text-left mt-8 tracking-tighter"
-			>
-				A mechanistic view: enabled by deep learning!
-			</h1>
-			<p
-				class="font-sans font-light text-l text-gray-500 mt-8 leading-relaxed"
-			>
-				Recent studies have suggested that the deep neural networks resembles the brain in many ways, both anatomically and functionally. As a result, we can potentially train deep learning models to mimic the functional activity profiles of our brain. Now that we have these brain "emulators", we can potentially simulate brain-like response patterns corresponding to new visual inputs, such as an unseen image.
-			
-			</p>
+	<Slide>
+		<div class="flex flex-wrap justify-evenly items-center mx-auto max-w-22/24 pt-20">
+			<div class="lg:w-11/24 w-22/24 mb-8">
+				<p class="font-sans font-bold text-sm text-blue-600 tracking-widest uppercase">
+					Next steps
+				</p>
+				<h1 class="font-sans font-black text-neutral-900 text-4xl text-left mt-8 tracking-tighter">
+					A mechanistic view: enabled by deep learning!
+				</h1>
+				<p class="font-sans font-light text-l text-gray-500 mt-8 leading-relaxed">
+					Recent studies have suggested that the deep neural networks resembles the brain in many
+					ways, both anatomically and functionally. As a result, we can potentially train deep
+					learning models to mimic the functional activity profiles of our brain. Now that we have
+					these brain "emulators", we can potentially simulate brain-like response patterns
+					corresponding to new visual inputs, such as an unseen image.
+				</p>
+			</div>
+			<div class="lg:w-11/24 w-22/24">
+				<lottie-player
+					src="https://assets2.lottiefiles.com/temp/lf20_3bpCnZ.json"
+					background="transparent"
+					speed="1"
+					loop
+					autoplay
+				/>
+			</div>
 		</div>
-		<div class="lg:w-11/24 w-22/24">
-			<lottie-player
-				src="https://assets2.lottiefiles.com/temp/lf20_3bpCnZ.json"
-				background="transparent"
-				speed="1"
-				loop
-				autoplay
-			/>
-		</div>
-	</div>
-</Slide>
-
-
+	</Slide>
 </Deck>

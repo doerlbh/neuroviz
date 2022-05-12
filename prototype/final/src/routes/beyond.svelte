@@ -1,50 +1,48 @@
 <script>
-  import NeurodataCard from "../components/neurodataCard.svelte";
-  import { neurodata, fetchNeurodata } from "../neurostore";
-  import Slide from "$lib/Slide.svelte";
-	import Deck from "$lib/Deck.svelte";
+	import NeurodataCard from '../components/neurodataCard.svelte';
+	import { neurodata, fetchNeurodata } from '../neurostore';
+	import Slide from '$lib/Slide.svelte';
+	import Deck from '$lib/Deck.svelte';
 
-  let searchTerm = "";
-  let filteredNeurodata = [];
+	let searchTerm = '';
+	let filteredNeurodata = [];
 
-  $: {
-    if (searchTerm) {
-      filteredNeurodata = $neurodata.filter((neurodata) =>
-        neurodata.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    } else {
-      filteredNeurodata = [...$neurodata];
-    }
-  }
+	$: {
+		if (searchTerm) {
+			filteredNeurodata = $neurodata.filter((neurodata) =>
+				neurodata.name.toLowerCase().includes(searchTerm.toLowerCase())
+			);
+		} else {
+			filteredNeurodata = [...$neurodata];
+		}
+	}
 
-  fetchNeurodata();
+	fetchNeurodata();
 </script>
 
-
 <nav class="flex justify-end w-full">
-	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-300 md:text-lg hover:scale-110" href="./">Journey</a>
+	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-300 md:text-lg hover:scale-110" href="./"
+		>Journey</a
+	>
 	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-300 md:text-lg hover:scale-110" href="./secret"
-	  >Secret</a
+		>Secret</a
 	>
 	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-300 md:text-lg hover:scale-110" href="./emulation"
-	  >Emulation</a
+		>Emulation</a
 	>
 	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-400 md:text-lg hover:scale-110" href="./beyond"
-	  >Beyond</a
+		>Beyond</a
 	>
 	<a class="pr-2 pl-2 pt-2 pb-2 text-sm text-gray-300 md:text-lg hover:scale-110" href="./about"
-	>?</a
-  >
-  </nav>
+		>?</a
+	>
+</nav>
 
-  <svelte:head>
+<svelte:head>
 	<title>Brain Experience | Beyond</title>
-  </svelte:head>
-
+</svelte:head>
 
 <Deck>
-
-
 	<Slide>
 		<div class="flex flex-col min-h-screen justify-center">
 			<h1
@@ -55,52 +53,45 @@
 			<p
 				class="font-sans font-normal text-center text-lg text-gray-500 max-w-4/6 mx-auto leading-relaxed"
 			>
-		 What is more to be expected?
-		</p>
+				What is more to be expected?
+			</p>
 
 			<p
 				class="font-sans font-normal text-center text-lg text-gray-300 max-w-4/6 mx-auto leading-relaxed"
 			>
-			Please press the right-left key to navigate the journey.
+				Please press the right-left key to navigate the journey.
 			</p>
 		</div>
 	</Slide>
 
-
-<Slide>
-	<div
-		class="flex flex-wrap justify-evenly items-center mx-auto max-w-22/24 pt-20"
-	>
-		<div class="lg:w-11/24 w-22/24 mb-8">
-			<p
-				class="font-sans font-bold text-sm text-blue-600 tracking-widest uppercase"
-			>
-				Next steps
-			</p>
-			<h1
-				class="font-sans font-black text-neutral-900 text-4xl text-left mt-8 tracking-tighter"
-			>
-				Synergy between AI and neuroscience
-			</h1>
-			<p
-				class="font-sans font-light text-l text-gray-500 mt-8 leading-relaxed"
-			>
-			Computational neuroscience is the field of study in which mathematical tools and theories are used to investigate brain function. It can also incorporate diverse approaches from electrical engineering, computer science and physics in order to understand how the nervous system processes information.
-			
-			</p>
+	<Slide>
+		<div class="flex flex-wrap justify-evenly items-center mx-auto max-w-22/24 pt-20">
+			<div class="lg:w-11/24 w-22/24 mb-8">
+				<p class="font-sans font-bold text-sm text-blue-600 tracking-widest uppercase">
+					Next steps
+				</p>
+				<h1 class="font-sans font-black text-neutral-900 text-4xl text-left mt-8 tracking-tighter">
+					Synergy between AI and neuroscience
+				</h1>
+				<p class="font-sans font-light text-l text-gray-500 mt-8 leading-relaxed">
+					Computational neuroscience is the field of study in which mathematical tools and theories
+					are used to investigate brain function. It can also incorporate diverse approaches from
+					electrical engineering, computer science and physics in order to understand how the
+					nervous system processes information.
+				</p>
+			</div>
+			<div class="lg:w-11/24 w-22/24">
+				<lottie-player
+					src="https://assets2.lottiefiles.com/packages/lf20_ayiupfed.json"
+					background="transparent"
+					speed="1"
+					loop
+					autoplay
+				/>
+			</div>
 		</div>
-		<div class="lg:w-11/24 w-22/24">
-			<lottie-player
-				src="https://assets2.lottiefiles.com/packages/lf20_ayiupfed.json"
-				background="transparent"
-				speed="1"
-				loop
-				autoplay
-			/>
-		</div>
-	</div>
-</Slide>
-<!-- 
+	</Slide>
+	<!-- 
 <Slide>
 
 <h1 class="text-2xl md:text-4xl text-center my-8">
