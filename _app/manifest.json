@@ -1,11 +1,11 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-214fb705.js",
+    "file": "start-3abb0a0a.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-2a10ab7e.js",
-      "_index-bbe23381.js"
+      "_index-ced28191.js",
+      "_index-80e34831.js"
     ],
     "dynamicImports": [
       "src/routes/__layout.svelte",
@@ -20,94 +20,94 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-bf48d7af.js",
+    "file": "pages/__layout.svelte-d02bab9e.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-2a10ab7e.js"
+      "_index-ced28191.js"
     ],
     "css": [
       "assets/pages/__layout.svelte-7e069fd7.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
-    "file": "error.svelte-5348c1f8.js",
+    "file": "error.svelte-e71c69c6.js",
     "src": ".svelte-kit/runtime/components/error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-2a10ab7e.js"
+      "_index-ced28191.js"
     ]
   },
   "src/routes/about.svelte": {
-    "file": "pages/about.svelte-6cf08a91.js",
+    "file": "pages/about.svelte-ec9ca7f4.js",
     "src": "src/routes/about.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-2a10ab7e.js",
-      "_neurodataCard-5cb8c291.js",
-      "_neurostore-075f6ea3.js",
-      "_Deck-26b8741d.js",
-      "_index-bbe23381.js"
+      "_index-ced28191.js",
+      "_neurodataCard-4f839e42.js",
+      "_neurostore-10dcfc81.js",
+      "_Deck-bc8b1f07.js",
+      "_index-80e34831.js"
     ]
   },
   "src/routes/beyond.svelte": {
-    "file": "pages/beyond.svelte-9aec54c4.js",
+    "file": "pages/beyond.svelte-41ba1f3c.js",
     "src": "src/routes/beyond.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-2a10ab7e.js",
-      "_neurostore-075f6ea3.js",
-      "_Deck-26b8741d.js",
-      "_index-bbe23381.js"
+      "_index-ced28191.js",
+      "_neurostore-10dcfc81.js",
+      "_Deck-bc8b1f07.js",
+      "_index-80e34831.js"
     ]
   },
   "src/routes/emulation.svelte": {
-    "file": "pages/emulation.svelte-5f971cce.js",
+    "file": "pages/emulation.svelte-c03b0b2f.js",
     "src": "src/routes/emulation.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-2a10ab7e.js",
-      "_Deck-26b8741d.js",
-      "_index-bbe23381.js"
+      "_index-ced28191.js",
+      "_Deck-bc8b1f07.js",
+      "_index-80e34831.js"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-2b92eac1.js",
+    "file": "pages/index.svelte-d78fcd48.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-2a10ab7e.js",
-      "_Deck-26b8741d.js",
+      "_index-ced28191.js",
+      "_Deck-bc8b1f07.js",
       "_allen_tiny_tiny_tiny-89c4da63.js",
-      "_index-bbe23381.js"
+      "_index-80e34831.js"
     ]
   },
   "src/routes/neurodata/[id].svelte": {
-    "file": "pages/neurodata/_id_.svelte-9c8a0672.js",
+    "file": "pages/neurodata/_id_.svelte-f042b11f.js",
     "src": "src/routes/neurodata/[id].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-2a10ab7e.js",
-      "_Deck-26b8741d.js",
+      "_index-ced28191.js",
+      "_Deck-bc8b1f07.js",
       "src/routes/singleviz.svelte",
-      "_index-bbe23381.js",
+      "_index-80e34831.js",
       "_allen_tiny_tiny_tiny-89c4da63.js"
     ]
   },
   "src/routes/singleviz.svelte": {
-    "file": "pages/singleviz.svelte-db197f00.js",
+    "file": "pages/singleviz.svelte-0539e41a.js",
     "src": "src/routes/singleviz.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-2a10ab7e.js",
+      "_index-ced28191.js",
       "_allen_tiny_tiny_tiny-89c4da63.js"
     ],
     "css": [
@@ -115,46 +115,46 @@
     ]
   },
   "src/routes/secret.svelte": {
-    "file": "pages/secret.svelte-868a836d.js",
+    "file": "pages/secret.svelte-22b4461e.js",
     "src": "src/routes/secret.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_index-2a10ab7e.js",
-      "_neurodataCard-5cb8c291.js",
-      "_neurostore-075f6ea3.js",
+      "_index-ced28191.js",
+      "_neurodataCard-4f839e42.js",
+      "_neurostore-10dcfc81.js",
       "_allen_tiny_tiny_tiny-89c4da63.js",
-      "_Deck-26b8741d.js",
-      "_index-bbe23381.js"
+      "_Deck-bc8b1f07.js",
+      "_index-80e34831.js"
     ]
   },
-  "_index-2a10ab7e.js": {
-    "file": "chunks/index-2a10ab7e.js"
+  "_index-ced28191.js": {
+    "file": "chunks/index-ced28191.js"
   },
-  "_index-bbe23381.js": {
-    "file": "chunks/index-bbe23381.js",
+  "_index-80e34831.js": {
+    "file": "chunks/index-80e34831.js",
     "imports": [
-      "_index-2a10ab7e.js"
+      "_index-ced28191.js"
     ]
   },
-  "_neurodataCard-5cb8c291.js": {
-    "file": "chunks/neurodataCard-5cb8c291.js",
+  "_neurodataCard-4f839e42.js": {
+    "file": "chunks/neurodataCard-4f839e42.js",
     "imports": [
-      "_index-2a10ab7e.js",
-      "_neurostore-075f6ea3.js"
+      "_index-ced28191.js",
+      "_neurostore-10dcfc81.js"
     ]
   },
-  "_neurostore-075f6ea3.js": {
-    "file": "chunks/neurostore-075f6ea3.js",
+  "_neurostore-10dcfc81.js": {
+    "file": "chunks/neurostore-10dcfc81.js",
     "imports": [
-      "_index-bbe23381.js"
+      "_index-80e34831.js"
     ]
   },
-  "_Deck-26b8741d.js": {
-    "file": "chunks/Deck-26b8741d.js",
+  "_Deck-bc8b1f07.js": {
+    "file": "chunks/Deck-bc8b1f07.js",
     "imports": [
-      "_index-2a10ab7e.js",
-      "_index-bbe23381.js"
+      "_index-ced28191.js",
+      "_index-80e34831.js"
     ],
     "css": [
       "assets/Deck-c4f45653.css"
