@@ -1,4 +1,4 @@
-# The Brain Experience
+# Brain Experience
 
 By [Baihan Lin](https://www.baihan.org/ "Baihan Lin") &copy; 2022, All Rights Reserved. Presented at the Data Visualization Keynote of Parsons School of Design.
    
@@ -14,7 +14,7 @@ Demo video: [https://youtu.be/T88bKQzu0P4](https://youtu.be/T88bKQzu0P4 "https:/
 
 <br>
 
-In The Brain Experience, the data visualization enables the users to experience how human brains perform complicated tasks that we as people find easy. The mechanisms and processes beneath it, surprisingly, are highly complex and involve many organic elements. The projects can help the users unravel these beautiful mysteries that intrigue scientists and philosophers for ages. The cognitive tasks specific for this visualization are mostly likely to be either viewing images or listening to music.
+In Brain Experience, the data visualization enables the users to experience how human brains perform complicated tasks that we as people find easy. The mechanisms and processes beneath it, surprisingly, are highly complex and involve many organic elements. The projects can help the users unravel these beautiful mysteries that intrigue scientists and philosophers for ages. The cognitive tasks specific for this visualization are mostly likely to be either viewing images or listening to music.
 
 <br>
 
