@@ -1,6 +1,6 @@
 # The Brain Experience
 
-By [Baihan Lin](https://www.baihan.org/ "Baihan Lin") &copy; 2022, All Rights Reserved.
+By [Baihan Lin](https://www.baihan.org/ "Baihan Lin") &copy; 2022, All Rights Reserved. Presented at the Data Visualization Keynote of Parsons School of Design.
    
 Live ebsite: [howbrain.work](https://howbrain.work/ "howbrain.work")
     
